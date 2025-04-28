@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import iranSans from "@/constant/iranSansFont";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,8 @@ export default function RootLayout({
   return (
     <html dir="rtl">
       <body className={`${iranSans.variable}`}>
-        <div className=""></div>
-        {children}
+        <Header />
+        <div> {children}</div>
       </body>
     </html>
   );
