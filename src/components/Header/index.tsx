@@ -6,10 +6,14 @@ import ProfileButton from "./ProfileButton";
 function Header() {
   return (
     <header className="h-16 w-full">
-      <nav className="container mx-auto flex h-full content-center items-center justify-between">
-        <Image src={logo} alt="Logo" className="size-10" />
+      <nav className="container mx-auto flex h-full content-center items-center">
+        <div className="flex-1">
+          <Image src={logo} alt="Logo" className="size-10" />
+        </div>
         <Nav />
-        <ProfileButton />
+        <div className="flex flex-1 justify-end">
+          <ProfileButton />
+        </div>
       </nav>
     </header>
   );

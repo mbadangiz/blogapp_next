@@ -16,28 +16,33 @@ const NavItems: IN_NavItem[] = [
     title: "بلاگ ها",
     path: "/blogs",
   },
+  {
+    id: 3,
+    title: "درباره ما",
+    path: "/aboutus",
+  },
 ];
 
 function Nav() {
   const currentPath = usePathname();
 
   return (
-    <ul className="flex content-center items-center gap-3.5">
+    <div className="flex content-center items-center justify-center gap-3.5">
       {NavItems.map((item) => {
         const { title, id, path } = item;
         return (
           <Link href={path} key={id}>
-            <li
-              className={clsx("p-1 opacity-80", {
+            <div
+              className={clsx("list-none p-1 opacity-80", {
                 "font-bold opacity-100": currentPath === path,
               })}
             >
               {title}
-            </li>
+            </div>
           </Link>
         );
       })}
-    </ul>
+    </div>
   );
 }
 

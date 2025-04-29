@@ -4,7 +4,10 @@
   --font-sans: var(--fonts-iransans);
   --container-center: true;
 
+  --spacing-22: 5.5rem;
+
   --color-primaryBlue: #377dff;
+  --color-primaryBlue-700: #1464f9;
   --color-primaryBlack: #1d1d1d;
   --color-danger: #ff2d2d;
   --color-warning: #ffa800;

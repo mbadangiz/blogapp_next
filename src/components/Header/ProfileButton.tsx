@@ -1,19 +1,25 @@
 import Button from "@/core/components/button";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 function ProfileButton() {
   const user = false;
   return (
-    <div>
+    <>
       {user ? (
-        <UserCircleIcon />
+        <Link href={"/profile"}>
+          <UserCircleIcon className="text-primaryBlack size-9" />
+        </Link>
       ) : (
-        <>
-          <Button>ورود</Button>
-          <Button variants="outline">ثبت نام</Button>
-        </>
+        <div className="flex content-center items-center gap-2">
+          <Link href={"/auth/login"}>
+            <Button variants="outline" className="!rounded-4xl">
+              ورود / ثبت نام
+            </Button>
+          </Link>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 
