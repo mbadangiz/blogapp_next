@@ -10,34 +10,29 @@ const NavItems: IN_NavItem[] = [
     id: 1,
     title: "خانه",
     path: "/",
-    icons: <HomeIcon className="size-5" />,
   },
   {
     id: 2,
     title: "بلاگ ها",
     path: "/blogs",
-    icons: <NewspaperIcon className="size-5" />,
   },
 ];
 
 function Nav() {
   const currentPath = usePathname();
+
   return (
-    <ul className="flex content-center items-center gap-4">
+    <ul className="flex content-center items-center gap-3.5">
       {NavItems.map((item) => {
-        const { title, icons, id, path } = item;
+        const { title, id, path } = item;
         return (
           <Link href={path} key={id}>
             <li
-              className={clsx(
-                "flex cursor-pointer content-center items-center gap-2",
-                {
-                  "text-blue-800": currentPath === path,
-                },
-              )}
+              className={clsx("p-1 opacity-80", {
+                "font-bold opacity-100": currentPath === path,
+              })}
             >
-              {icons}
-              <p className={clsx("font-semibold")}>{title}</p>
+              {title}
             </li>
           </Link>
         );

@@ -1,7 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import iranSans from "@/constant/iranSansFont";
 import Header from "@/components/Header";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,8 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html dir="rtl">
-      <body className={`${iranSans.variable}`}>{children}</body>
-    </html>
+    <>
+      <Header />
+      <div className="container mx-auto"> {children}</div>
+    </>
   );
 }

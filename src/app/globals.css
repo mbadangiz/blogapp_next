@@ -3,11 +3,18 @@
 @theme inline {
   --font-sans: var(--fonts-iransans);
   --container-center: true;
+
+  --color-primaryBlue: #377dff;
+  --color-primaryBlack: #1d1d1d;
+  --color-danger: #ff2d2d;
+  --color-warning: #ffa800;
+  --color-success: #7ce761;
+  --color-gray: #464646;
 }
 
 @layer base {
   * {
-    @apply m-0 box-border border-0 p-0 font-sans outline-transparent transition-all outline-none;
+    @apply text-primaryBlack m-0 box-border border-0 p-0 font-sans outline-transparent transition-all outline-none;
   }
 
   html,
