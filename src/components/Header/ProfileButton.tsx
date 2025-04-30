@@ -13,7 +13,10 @@ function ProfileButton() {
       ) : (
         <div className="flex content-center items-center gap-2">
           <Link href={"/auth/login"}>
-            <Button variants="outline" className="!rounded-4xl">
+            <Button
+              variants="outline"
+              className="!rounded-4xl !text-sm lg:!text-base"
+            >
               ورود / ثبت نام
             </Button>
           </Link>
