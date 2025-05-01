@@ -1,8 +1,4 @@
-import {
-  EN_ButtonSize,
-  EN_ButtonVariant,
-  EN_ColorVariant,
-} from "@/types/enums";
+import { EN_Size, EN_ButtonVariant, EN_ColorVariant } from "@/types/enums";
 
 const buttonStyles: Record<
   EN_ButtonVariant,
@@ -34,10 +30,10 @@ const buttonStyles: Record<
   },
 };
 
-const buttonSizeClasses: Record<EN_ButtonSize, string> = {
-  [EN_ButtonSize.SMALL]: "px-3 py-1 text-sm",
-  [EN_ButtonSize.MEDIUM]: "px-4 py-2 text-base",
-  [EN_ButtonSize.LARGE]: "px-5 py-3 text-lg",
+const buttonSizeClasses: Record<EN_Size, string> = {
+  [EN_Size.SMALL]: "px-3 py-1 text-sm",
+  [EN_Size.MEDIUM]: "px-4 py-2 text-base",
+  [EN_Size.LARGE]: "px-5 py-3 text-lg",
 };
 
 export { buttonSizeClasses, buttonStyles };

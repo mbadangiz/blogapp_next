@@ -55,7 +55,9 @@ function Nav() {
                 className={clsx(
                   "list-none p-1 text-sm opacity-80 lg:text-base",
                   {
-                    "font-bold opacity-100": currentPath === path,
+                    "font-bold opacity-100":
+                      (path === "/" && currentPath === "/") ||
+                      (path !== "/" && currentPath.startsWith(path)),
                   },
                 )}
                 onClick={function () {

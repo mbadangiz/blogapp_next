@@ -1,9 +1,5 @@
 import { buttonSizeClasses, buttonStyles } from "@/constant/buttonStyles";
-import {
-  EN_ButtonSize,
-  EN_ButtonVariant,
-  EN_ColorVariant,
-} from "@/types/enums";
+import { EN_Size, EN_ButtonVariant, EN_ColorVariant } from "@/types/enums";
 import { IN_ButtonProps } from "@/types/interfaces";
 
 function Button({
@@ -11,7 +7,7 @@ function Button({
   className,
   variants = EN_ButtonVariant.SOLID,
   color = EN_ColorVariant.PRIMARY,
-  size = EN_ButtonSize.MEDIUM,
+  size = EN_Size.MEDIUM,
   ...rest
 }: IN_ButtonProps) {
   return (

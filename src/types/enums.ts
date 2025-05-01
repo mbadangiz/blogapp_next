@@ -11,8 +11,14 @@ export enum EN_ButtonVariant {
   OUTLINE = "outline",
 }
 
-export enum EN_ButtonSize {
+export enum EN_Size {
   LARGE = "large",
   MEDIUM = "medium",
-  SMALL = "small"
+  SMALL = "small",
+}
+
+export enum EN_ChipVariant {
+  FLAT = "flat",
+  BORDERED = "bordered",
+  SOLID = "solid",
 }
