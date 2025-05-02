@@ -1,5 +1,10 @@
 import { ButtonHTMLAttributes, InputHTMLAttributes, ReactNode } from "react";
-import { T_Size, T_ButtonVariant, T_ColorVariant } from "./types";
+import {
+  T_Size,
+  T_ButtonVariant,
+  T_ColorVariant,
+  T_ChipVariant,
+} from "./types";
 
 export interface IN_NavItem {
   id: number;
@@ -28,4 +33,11 @@ export interface IN_Category {
 
 export interface IN_InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
+}
+
+export interface IN_chipProps {
+  variant?: T_ChipVariant;
+  size?: T_Size;
+  text?: string;
+  color?: T_ColorVariant;
 }

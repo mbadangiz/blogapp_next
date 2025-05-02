@@ -1,4 +1,5 @@
 import BlogCategories from "./_components/blogCategories";
+import FilteringArea from "./_components/filteringArea";
 
 function Layout({
   children,
@@ -7,7 +8,7 @@ function Layout({
 }>) {
   return (
     <div className="grid w-full grid-cols-12 pt-5">
-      <BlogCategories />
+      <FilteringArea />
       <div className="col-span-12 px-2 lg:col-span-9 lg:px-0 xl:col-span-10">
         <div>somethings</div>
         <div>{children}</div>
