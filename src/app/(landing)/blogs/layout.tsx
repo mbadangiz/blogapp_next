@@ -11,7 +11,7 @@ function Layout({
   return (
     <div className="grid w-full grid-cols-12 pt-5">
       <FilteringArea />
-      <div className="col-span-12 px-2 lg:col-span-9 lg:px-0 xl:col-span-10">
+      <div className="col-span-12 mb-9 px-2 lg:col-span-9 lg:px-0 xl:col-span-10">
         <div>somethings</div>
         <div>
           <Suspense fallback={<Waiting />}>{children}</Suspense>

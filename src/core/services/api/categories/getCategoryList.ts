@@ -1,9 +1,9 @@
 import { IN_Category } from "@/types/interfaces";
-import fetchGet from "../../fetchGet";
+import customFetchApi from "../../customFetchApi";
 
 export async function getCategoriesList(): Promise<IN_Category[]> {
   try {
-    const res = await fetchGet("/category/list", { method: "get" });
+    const res = await customFetchApi("/category/list", { method: "get" });
 
     const {
       data: { categories },

@@ -2,7 +2,7 @@ import {
   IN_GetListOfBlogs,
   IN_PostListPostsApiResponse,
 } from "@/types/interfaces";
-import fetchGet from "../../fetchGet";
+import customFetchApi from "../../customFetchApi";
 
 export default async function getBlogList(
   searchParams: IN_GetListOfBlogs,
@@ -18,7 +18,9 @@ export default async function getBlogList(
     }
     const path = "/post/list" + query;
 
-    const res = await fetchGet(path);
+    const res = await customFetchApi(path, {
+      cache: "no-cache",
+    });
     return res;
   } catch (error) {
     console.log(error);

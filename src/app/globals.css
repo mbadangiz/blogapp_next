@@ -25,3 +25,9 @@
     font-family: var(--font-iranSans);
   }
 }
+
+@layer components {
+  .hr {
+    @apply h-[3px] w-full bg-black/5;
+  }
+}
